@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="itemsTV" destination="8MH-5M-O4o" id="3Ze-oX-OCN"/>
+                <outlet property="searchTF" destination="1JU-DQ-roW" id="Kcg-Ia-51F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EX0-JN-hsO">
+                    <rect key="frame" x="20" y="64" width="284" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search by movie name ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JU-DQ-roW">
+                            <rect key="frame" x="20" y="0.0" width="244" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1JU-DQ-roW" secondAttribute="trailing" constant="20" id="Sjj-Bu-Rmu"/>
+                        <constraint firstAttribute="bottom" secondItem="1JU-DQ-roW" secondAttribute="bottom" id="Te6-aj-7ay"/>
+                        <constraint firstItem="1JU-DQ-roW" firstAttribute="top" secondItem="EX0-JN-hsO" secondAttribute="top" id="YzR-lQ-foy"/>
+                        <constraint firstAttribute="height" constant="40" id="gfK-IJ-1hg"/>
+                        <constraint firstItem="1JU-DQ-roW" firstAttribute="leading" secondItem="EX0-JN-hsO" secondAttribute="leading" constant="20" id="tzt-6h-qHh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVr-Sg-IYR">
+                    <rect key="frame" x="324" y="64" width="70" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="XSb-wt-FC6"/>
+                        <constraint firstAttribute="height" constant="40" id="jqc-zm-95S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="searchTapped:" destination="-1" eventType="touchUpInside" id="EyU-jr-EOk"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8MH-5M-O4o">
+                    <rect key="frame" x="0.0" y="124" width="414" height="718"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uVr-Sg-IYR" secondAttribute="trailing" constant="20" id="37P-1Q-B86"/>
+                <constraint firstItem="8MH-5M-O4o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="85X-jD-Vtk"/>
+                <constraint firstItem="EX0-JN-hsO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LTG-Ak-EWf"/>
+                <constraint firstItem="8MH-5M-O4o" firstAttribute="top" secondItem="EX0-JN-hsO" secondAttribute="bottom" constant="20" id="aH5-jk-T71"/>
+                <constraint firstItem="uVr-Sg-IYR" firstAttribute="leading" secondItem="EX0-JN-hsO" secondAttribute="trailing" constant="20" id="dJs-Ps-DOb"/>
+                <constraint firstItem="EX0-JN-hsO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="edh-CP-jci"/>
+                <constraint firstItem="uVr-Sg-IYR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="pcI-6s-CLr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8MH-5M-O4o" secondAttribute="trailing" id="tsI-36-Oe5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8MH-5M-O4o" secondAttribute="bottom" constant="20" id="zve-HZ-mEk"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
